@@ -1,1 +1,1 @@
-print("*" * 10) #In python string can multiply with int
+print("*" * 10) # In python string can multiply with int
