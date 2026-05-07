@@ -1,0 +1,12 @@
+list = [3,64,23,53,2,5]
+list.append(10)
+print(list)
+list.remove(23)
+print(list)
+list2 = list.copy()
+print(list2)
+print(list.index(2))
+list.reverse()
+print(list)
+list.sort()
+print(list)
