@@ -4,6 +4,10 @@ def salary_Function(name,position,salary) :
     print(f"Employee salary is {salary}")
     bonus = salary + 4000
     return bonus
+
+
+#from the function keep two blank sapce is the best practice
+
 name = input("What is your name ")
 position = input ("What is your position ")
 salary = int (input ("What is your salary "))
