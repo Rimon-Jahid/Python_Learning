@@ -3,10 +3,8 @@ class Person :
        self.name = name 
 
     def talk(self) :
-        print("He is talking")
+        print(f"He is {self.name}")
 
 
-person1 = Person
-person1.talk(person1)
-person2 = Person("Rimon")
-print(person2.name)
+person1 = Person("Rimon")
+person1.talk()
