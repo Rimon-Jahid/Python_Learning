@@ -1,11 +1,12 @@
-class Student :
-    def printname(self,name) :
-        print(name) 
-    def printcgpa(self,cgpa) :
-        print(cgpa)
+class Person :
+    def __init__(self,name):
+       self.name = name 
 
-s1 = Student()
-s1.age = 24
-s1.printname("Rimon")
-print(s1.age)
-s1.printcgpa(3.50)
+    def talk(self) :
+        print("He is talking")
+
+
+person1 = Person
+person1.talk(person1)
+person2 = Person("Rimon")
+print(person2.name)
