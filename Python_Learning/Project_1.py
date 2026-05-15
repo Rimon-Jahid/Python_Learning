@@ -1,8 +1,28 @@
 import openpyxl as xl
+from openpyxl.chart import Reference, BarChart
 
 wb = xl.load_workbook("transactions.xlsx")
+
 sheet = wb["Sheet1"]
 
 cell = sheet["A1"]
 
-print(cell.value)
+for row in range(2, sheet.max_row + 1) :
+    cell = sheet.cell(row,3)
+    corrected_vlue = (cell.value) * 0.9
+    corrected_vlue_cell = sheet.cell(row,4)
+    corrected_vlue_cell.value = corrected_vlue
+
+values = Reference (
+    sheet,
+    min_row = 2,
+    max_row = sheet.max_row + 1,
+    min_col = 4,
+    max_col = 4
+)
+
+chart = BarChart()
+chart.add_data(values)
+sheet.add_chart(chart,"E2")
+
+wb.save("transaction3.xlsx")
